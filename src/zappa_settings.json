@@ -1,6 +1,6 @@
 {
     "dev": {
-        "django_settings": "servless_python_with_zappa.settings",
+        "django_settings": "zappa-servless.settings",
         "profile_name": "oort",
         "project_name": "src",
         "runtime": "python3.7",

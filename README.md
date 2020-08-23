@@ -1,4 +1,4 @@
-# Servless Python with Zappa
+# Python Servless with Zappa
 ## Introduction
 The Zappa is a tool which claim "no permeanent infrastructure". It helps to build and deploy the servless Python app on AWS Lambda + API Gateway.
 
@@ -20,10 +20,10 @@ pip install django djangorestframework zappa
 
 ## Create project.
 ```shellscript
-django-admin startproject servless_python_with_zappa
+django-admin startproject zappa-servless
 ```
 
-(Optional) Rename the servless_python_with_zappa project to `src`.
+(Optional) Rename the zappa-servless project to `src`.
 
 ## Create App
 Change directory under the project folder and create app.
@@ -52,7 +52,7 @@ The `zappa_setting.json` definie the deployment configuration settings. It could
 {
     "dev": {
         // Django settings file path
-        "django_settings": "servless_python_with_zappa.settings", 
+        "django_settings": "zappa-servless.settings", 
         // aws profile name
         "profile_name": "aws", 
         "project_name": "src",
@@ -68,7 +68,7 @@ Please refer Edgar Roman's [Django Zappa Guide](https://edgarroman.github.io/zap
 ### Initial Deployments
 Once the settings are configured, the project is ready for deployment. With following command you can assign what API Gateway stage(e.g. `dev`, `prod`) you'd like to deploy. 
 ```shellscript
-zappa deploy <stage>
+zappa deploy [stage]
 ```
 More detail about [Zappa deployment](https://github.com/Miserlou/Zappa#initial-deployments).
 

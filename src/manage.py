@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'servless_python_with_zappa.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'zappa-servless.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
